@@ -1,0 +1,141 @@
+{% extends 'news\_base_index.html' %}
+
+{% block title %}
+Студия Charm -высокооплачиваемая работа вебкам моделью в видеочате
+{% endblock %}
+
+{% block content %}
+<div class="text_area">	
+					<h1>Калькулятор заработка Online модели</h1>
+						<p>Данный калькулятор позволяет Вам узнать примерную стоимость заработка в студии Charm. Рассчитанная сумма не может давать гарантию такого заработка, она может отличаться как в меньшую, так и в большую сторону, всё зависит от каждого человека индивидуально.</p>
+						<table align="center" border="0" cellspacing="5" class="pay_calc border border-danger">
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Опыт работы:<br>
+								<select id="pay_kof" onchange="pay_calc();">
+								<option value="0.6">без опыта</option>
+								<option value="0.7">1 месяц</option>
+								<option selected value="0.8">2 месяца</option>
+								<option value="0.9">6 месяцев</option>
+								<option value="1">более 6 месяцев</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Телосложение:<br>
+								<select id="pay_kof_body" onchange="pay_calc();">
+								<option value="1">спортивное</option>
+								<option selected value="0.65">обычное</option>
+								<option value="0.8">худое</option>
+								<option value="0.3">полное</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Любите ли Вы улыбаться?<br>
+								<select id="pay_kof_smile" onchange="pay_calc();">
+								<option selected value="1">да, легко и постоянно</option>
+								<option value="0.7">если смешно</option>
+								<option value="0.3">нет :-/</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Легко ли Вам общаться <br>с незнакомыми людьми?<br>
+								<select id="pay_kof_convers" onchange="pay_calc();">
+								<option selected value="1">запросто, люблю знакомства</option>
+								<option value="0.7">могу</option>
+								<option value="0.2">сложно</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Хорошо ли Вы <br>получаетесь на фото?<br>
+								<select id="pay_kof_photo" onchange="pay_calc();">
+								<option selected value="1">да, всегда</option>
+								<option value="0.7">если постараться</option>
+								<option value="0.3">нет и нет</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Уровень владения английским:<br>
+								<select id="pay_kof_eng" onchange="pay_calc();">
+								<option value="1">свободно</option>
+								<option selected value="0.8">в школе вроде было</option>
+								<option value="0.5">не понимаю</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="clear_10"></div>
+								Ваш возраст:<br>
+								<select id="pay_kof_age" onchange="pay_calc();">
+								<option selected value="1">18 - 22</option>
+								<option value="0.7">23 - 26</option>
+								<option value="0.3">старше 27</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="itog">
+								<center>
+								<b>Ваш доход:</b>
+								<br>
+								<table border="0">
+								<tr> <td> За смену: </td> <td> <div id="pay_summ"> </div></td> <td> руб.</td> </tr>
+								<tr> <td> За неделю:</td> <td> <div id="pay_summ_2"> </div></td> <td> руб.</td> </tr>
+								<tr> <td> За месяц: </td> <td> <div id="pay_summ_3"> </div></td> <td> руб.</td> </tr>
+								<tr> <td> За год: </td> <td> <div id="pay_summ_4"> </div></td> <td> руб.</td> </tr>
+								</table>
+								</center>
+							</td>
+						</tr>
+						</table>
+                        
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45323841 = new Ya.Metrika({
+                    id:45323841,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45323841" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+			</div>
+		</footer>
+	</div>
+<script type="text/javascript" src="https://studio-hollywood-spb.ru/js/calculator.js"></script>
+<script type="text/javascript" src="https://studio-hollywood-spb.ru/js/main.js"></script>
+
+{% endblock %}

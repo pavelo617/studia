@@ -1,0 +1,51 @@
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 1380px;
+	top: 0;
+	left: 0;
+	background-color: rgba(100, 100, 100, .5);
+	display: none;
+}
+.popup {
+	position: absolute;
+	width: 300px;
+	height: 180px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	background-color: #060406;
+}
+
+.close-popup {
+	background-image: url(http://s1.iconbird.com/ico/1112/Koloria/w21h211351868964ErrorSymbol.png);
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.close-popup:before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close-popup:after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}

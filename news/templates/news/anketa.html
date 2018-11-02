@@ -1,0 +1,89 @@
+{% extends 'news\_base_index.html' %}
+
+{% block title %}
+Студия Charm -высокооплачиваемая работа вебкам моделью в видеочате
+{% endblock %}
+
+{% block content %}
+<br>
+{% csrf_token %}
+	<form class="form" id="form" name="form" enctype="multipart/form-data">
+	<table border="1" class="anket_table border border-danger">
+		<tr>
+			<td height="40" align="center"> Ваше имя </td>
+			<td> <input required name="name" type="text" maxlength="100" class="anket_input" value=""> </td>
+		</tr>
+		<tr>
+			<td height="40" align="center"> Контактный телефон </td>
+			<td> <input required id="phone" name="phone" type="tel" maxlength="15" class="anket_input" value=""><br> <font size="1">пример: +79115556688</font> </td>
+		</tr>
+		<tr>
+			<td height="50" align="center"> Город проживания </td>
+			<td> <input required name="town" type="text" maxlength="100" class="anket_input" value=""> <br> <font size="1">Мы находимся в Омске! :-)</font> </td>
+		</tr>
+		<tr>
+			<td height="40" align="center"> Дата рождения </td>
+			<td>
+				<select required name="day" class="anket_input_day">
+					<option selected="selected"> 1 </option>
+					<option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option><option value=13>13</option><option value=14>14</option><option value=15>15</option><option value=16>16</option><option value=17>17</option><option value=18>18</option><option value=19>19</option><option value=20>20</option><option value=21>21</option><option value=22>22</option><option value=23>23</option><option value=24>24</option><option value=25>25</option><option value=26>26</option><option value=27>27</option><option value=28>28</option><option value=29>29</option><option value=30>30</option><option value=31>31</option>										</select>
+				<select required name="month" class="anket_input_month">
+					<option selected="selected" value="января"> января </option>
+					<option value="февраля">февраля</option>
+					<option value="марта">марта</option>
+					<option value="апреля">апреля</option>
+					<option value="мая">мая</option>
+					<option value="июня">июня</option>
+					<option value="июля">июля</option>
+					<option value="августа">августа</option>
+					<option value="сентября">сентября</option>
+					<option value="октября">октября</option>
+					<option value="ноября">ноября</option>
+					<option value="декабря">декабря</option>
+				</select>
+				<select required name="year" class="anket_input_year">
+					<option selected="selected"> 2000  </option>
+					<option value=1999>1999</option><option value=1998>1998</option><option value=1997>1997</option><option value=1996>1996</option><option value=1995>1995</option><option value=1994>1994</option><option value=1993>1993</option><option value=1992>1992</option><option value=1991>1991</option><option value=1990>1990</option><option value=1989>1989</option><option value=1988>1988</option><option value=1987>1987</option><option value=1986>1986</option><option value=1985>1985</option><option value=1984>1984</option><option value=1983>1983</option>										</select>
+			    </td>
+			</tr>
+				<tr>
+					<td align="center"> Коротко о себе </td>
+					<td><textarea name="usermsg" maxlength="1000" style="resize:none;"></textarea></td>
+				</tr>
+				
+				<tr>
+					<td height="50" align="center"> Уровень владения <br>английским языком </td>
+					<td>
+						<label><input class="anket_radio" type="radio" name="eng" value="Не владею" checked> Не владею</label><br>
+						<label><input class="anket_radio" type="radio" name="eng" value="Имею базовые знания" > Имею базовые знания(перевожу со словарем)</label><br>
+						<label><input class="anket_radio" type="radio" name="eng" value="Имею хорошие знания" > Имею хорошие знания(читаю, пишу)</label><br>
+						<label><input class="anket_radio" type="radio" name="eng" value="Свободно говорю на английском" > Свободно говорю на английском</label>
+					</td>
+				</tr>
+				<tr>
+					<td height="70" align="center"> В какое время Вам удобно <br> прийти на собеседование? </td>
+					<td> <input required name="time" type="text" maxlength="20" class="anket_input" value=""> </td>
+					</td>
+				</tr>
+				<tr>
+					<td height="40" align="center" colspan="3">
+						<input type="submit" class="anket_button" value="Отправить анкету">
+						<br><span style="font-size:85%;">Мы гарантируем не передавать Ваши персональные данные третьим лицам.</span>
+					</td>
+				</tr>
+			</table>
+		<input type="hidden" name="ref_info" value="">
+	</form>
+	<footer>
+		<div class="text-white overlay js-overlay-thank-you">
+			<div class="m-1 border border-danger popup js-thank-you">
+				<h2>Спасибо за заявку</h2>
+				<div class="close-popup js-close-thank-you"></div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="\static\js\main.js"></script>
+	<script src="\static\js\jquery.maskedinput.js"></script>
+
+{% endblock %}
