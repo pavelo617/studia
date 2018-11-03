@@ -125,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-try:
-    from .settings_prod import *
-except:
-    pass
+# try:
+#    from .settings_prod import *
+#except:
+#   pass
