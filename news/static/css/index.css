@@ -137,6 +137,12 @@ body
     display: inline-block;
     height: 22px;
 }
+.tem-9
+{
+    background-position: -1px -160px;
+    height: 18px;
+    display: inline-block;
+}
 .icon 
 {
     background-image: url(https://studio-hollywood-spb.ru/style/images/icons.png);

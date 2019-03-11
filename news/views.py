@@ -6,7 +6,8 @@ from django.forms import ModelForm
 from django.shortcuts import render_to_response, reverse
 from django.views import View
 from django.core.mail import send_mail, BadHeaderError, EmailMultiAlternatives
-    
+from .models import News
+from datetime import datetime, timedelta, timezone
 
 def info(request):
     return render(request, 'news/index.html')
@@ -49,3 +50,7 @@ def contact(request):
 
 def phone(request):
     return render (request, 'news/phone.html')
+    
+def news(request):
+    posts=News.objects.filter(date_pub__lte=datetime.now()).order_by('-date_pub')
+    return render (request, 'news/news.html', context={'posts':posts,})

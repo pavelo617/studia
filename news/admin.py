@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import News
+from django_summernote.admin import SummernoteModelAdmin
+
+class NewsAdmin(SummernoteModelAdmin):
+    summernote_fields = ('body',)
+
+admin.site.register(News, NewsAdmin)

@@ -8,4 +8,5 @@ urlpatterns = [
     path('anketa/', anketa),
     path('contact/', contact),
     path('phone/', phone),
+    path('news/', news),
 ]
